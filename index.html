@@ -67,6 +67,7 @@
   .nav-links{display:flex;gap:30px;font-size:.9rem;font-weight:500}
   .nav-links a{color:var(--muted);transition:color .18s}
   .nav-links a:hover{color:var(--magenta)}
+  .nav-links a.nav-cta:hover{color:#fff}
   .nav-cta{
     font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:600;
     padding:8px 16px;border-radius:999px;
@@ -384,12 +385,12 @@
     .pc-grid{grid-template-columns:1fr}
   }
   @media (max-width:680px){
-    .nav-links{
+    -links{
       display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;
       background:#fff;border-bottom:1px solid var(--lav-line);padding:14px 24px;gap:14px;
     }
-    .nav-links.open{display:flex}
-    .nav-toggle{display:block}
+    -links.open{display:flex}
+    -toggle{display:block}
     .orgs{grid-template-columns:1fr}
     .slot{grid-template-columns:84px 1fr;gap:14px}
     .foot-grid{grid-template-columns:1fr}
