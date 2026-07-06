@@ -159,6 +159,24 @@
   .strip .note{font-size:.85rem;color:#e3cdf5}
   #countdown{font-family:'JetBrains Mono',monospace;font-weight:600;color:#ffd6ff}
 
+  /* ── Extension announcement banner ── */
+  .announce{
+    background:var(--lav-soft);
+    border-bottom:1px solid var(--lav-line);
+  }
+  .announce-inner{
+    max-width:var(--maxw);margin:0 auto;padding:16px 24px;
+    display:flex;align-items:flex-start;gap:14px;
+  }
+  .announce .tag{
+    flex:none;font-family:'JetBrains Mono',monospace;font-size:.68rem;
+    letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#fff;
+    background:linear-gradient(135deg,var(--purple),var(--magenta));
+    padding:5px 11px;border-radius:999px;margin-top:2px;
+  }
+  .announce p{color:var(--ink);font-size:.95rem;margin:0}
+  .announce p strong{color:var(--deep)}
+
   /* ── Section scaffold ── */
   section{padding:84px 0}
   .sec-head{margin-bottom:44px;max-width:760px}
@@ -450,8 +468,8 @@
   <div class="strip">
     <div class="strip-inner">
       <div>
-        <div class="lab">Submission deadline</div>
-        <div class="big">July 5, 2026</div>
+        <div class="lab">Submission deadline · Extended</div>
+        <div class="big">July 10, 2026 <span style="font-weight:500;font-size:.9rem;color:#e3cdf5;">(was July 5)</span></div>
       </div>
       <div style="flex:1"></div>
       <div class="note">
@@ -460,6 +478,14 @@
     </div>
   </div>
 </header>
+
+<!-- EXTENSION ANNOUNCEMENT -->
+<div class="announce">
+  <div class="announce-inner">
+    <span class="tag">Deadline extended</span>
+    <p>We're grateful for the 15 submissions received so far. Following requests from several colleagues for additional time — and to welcome as many strong contributions as possible — we've extended the paper submission deadline to <strong>July 10, 2026 (AoE)</strong>.</p>
+  </div>
+</div>
 
 <!-- OVERVIEW -->
 <section id="overview">
@@ -651,7 +677,7 @@
         <h3>Key dates</h3>
         <div class="dates">
           <div class="drow"><span class="dl">CfP available</span><span class="dv">Jun 19, 2026</span></div>
-          <div class="drow key"><span class="dl">Paper submission deadline</span><span class="dv">Jul 5, 2026</span></div>
+          <div class="drow key"><span class="dl">Paper submission deadline <em style="font-style:normal;color:var(--magenta);font-weight:600;">(extended)</em></span><span class="dv">Jul 10, 2026</span></div>
           <div class="drow"><span class="dl">Acceptance notification</span><span class="dv">Jul 17, 2026</span></div>
           <div class="drow"><span class="dl">Camera-ready due</span><span class="dv">Jul 31, 2026</span></div>
           <div class="drow"><span class="dl">Workshop</span><span class="dv">Oct 5, 2026</span></div>
@@ -785,7 +811,7 @@
 
   // Countdown to submission deadline
   (function(){
-    const deadline = new Date('2026-07-05T23:59:59-12:00'); // AoE
+    const deadline = new Date('2026-07-10T23:59:59-12:00'); // AoE (extended from Jul 5)
     const el = document.getElementById('countdown');
     function tick(){
       const now = new Date();
